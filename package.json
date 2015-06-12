@@ -1,27 +1,27 @@
 {
-  "name": "hubot-script-http",
+  "name": "hubot-recurry",
   "version": "0.0.22",
-  "description": "interface to script-http , the recurrent REST scheduler",
+  "description": "interface to recurry , the recurrent REST scheduler",
   "main": "index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/coderofsalvation/hubot-script-http"
+    "url": "https://github.com/coderofsalvation/hubot-recurry"
   },
   "dependencies": {
     "easy-table": "^1.0.0"
   },
   "keywords": [
     "hubot",
-    "script-http",
+    "recurry",
     "recurring rest calls"
   ],
   "author": "Leon van Kammen / coderofsalvation",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coderofsalvation/hubot-script-http/issues"
+    "url": "https://github.com/coderofsalvation/hubot-recurry/issues"
   },
-  "homepage": "https://github.com/coderofsalvation/hubot-script-http"
+  "homepage": "https://github.com/coderofsalvation/hubot-recurry"
 }
