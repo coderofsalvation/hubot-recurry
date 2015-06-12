@@ -22,7 +22,7 @@ module.exports = (robot) ->
   ascii     = require('easy-table')
 
   recurry = 
-    url: ( if process.env.DEBUG then "http://localhost:3333" else "http://lb.recurry.2webapp.com")
+    url: ( if process.env.RECURRY_URL then process.env.RECURRY_URL else "http://localhost:3333")
     usage:
       setscheduler: "Usage: recurry setscheduler <id> <phrase>\n\n
 Example: recurry setscheduler 12 every 5 mins\n\nphrases: \n
