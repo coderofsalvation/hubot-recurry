@@ -35,7 +35,7 @@ Example: recurry setscheduler 12 every 5 mins\n\nphrases: \n
 \t3 weeks, 5d 6h"
       add: "Usage: recurry add <method> <url> <name>\n\n
 Example: recurry add get http://fooo.com get_foo_com\n
-         recurry set payload get_foo_com {\"foo\":\"bar\"}\n"
+         recurry setpayload get_foo_com {\"foo\":\"bar\"}\n"
 
   format = (data,format) ->
     if format is "ascii"
