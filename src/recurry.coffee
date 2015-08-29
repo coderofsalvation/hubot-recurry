@@ -8,6 +8,7 @@
 #   hubot recurry setscheduler              - set scheduler frequency
 #   hubot recurry setpayload <id> <jsonstr> - set json payload for scheduled call 
 #   hubot recurry view <id>                 - view details and payload of scheduled call 
+#   hubot recurry trigger <id>              - manually trigger scheduler, regardless of shedulertime 
 #   hubot recurry add                       - how to add a recurring scheduled call 
 #   hubot recurry scheduler <action> <id>   - control a scheduler, actions: start, stop, resume, pause 
 #   hubot recurry reset <id>                - reset 'triggered' field to zero 
