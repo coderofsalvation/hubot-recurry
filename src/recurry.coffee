@@ -110,6 +110,15 @@ Example: recurry add get http://fooo.com get_foo_com\n
       .get() (err,res,body) ->
         msg.send JSON.stringify( JSON.parse(body ),null, 2 )
 
+  robot.respond /recurry trigger (.*)/i, (msg) ->
+    args = msg.match[1].split(" ")
+    id = args.shift()
+    data = {}
+    robot.http( recurry.url+"/scheduler/trigger/"+id  )
+      .header('Content-Type', 'application/json')
+      .put() (err,res,body) ->
+        msg.send JSON.stringify( JSON.parse(body ),null, 2 )
+
   robot.respond /recurry setpayload (.*)/i, (msg) ->
     args = msg.match[1].split(" ")
     id = args.shift()

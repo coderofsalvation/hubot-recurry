@@ -16,6 +16,5 @@ Interface to recurry, the [recurring REST-call scheduler](https://www.npmjs.com/
     hubot recurry setpayload <id> <jsonstr> - set json payload for scheduled call
     hubot recurry setscheduler              - set scheduler frequency
     hubot recurry view <id>                 - view details and payload of scheduled call
-    hubot scraper <start|stop> <name>       - control scrapers
-    hubot scraper list                      - lists scrapers
+    hubot recurry trigger <id>              - manually trigger scheduler, regardless of scheduletime
 
