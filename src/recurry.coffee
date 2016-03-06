@@ -68,9 +68,9 @@ Example: recurry add get http://fooo.com get_foo_com\n
     args = msg.match[1].split(" ")
     return msg.send( recurry.usage.add ) if args.length != 3
     data = {}
-    data.id     = args.pop()
-    data.url    = args.pop()
-    data.method = args.pop()
+    data.id     = args.pop().trim()
+    data.url    = args.pop().trim()
+    data.method = args.pop().trim()
     data.scheduler = "?"
     console.dir data
     robot.http( recurry.url+"/scheduler"  )
