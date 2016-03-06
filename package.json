@@ -1,6 +1,6 @@
 {
   "name": "hubot-recurry",
-  "version": "0.0.29",
+  "version": "1.0.0",
   "description": "interface to recurry , the recurrent REST scheduler",
   "main": "index.coffee",
   "scripts": {
