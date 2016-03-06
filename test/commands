@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+spawn timeout 20 test/test.bash 20
+expect "Hubot>"
+send "hubot recurry add get http://localhost/foo get_foo_com\n"
+expect "Hubot>"
+sleep 2
+send "hubot recurry\n"
+expect "Hubot>"
+sleep 2
+send "hubot recurry setscheduler get_foo_com every 13 seconds\n"
+expect "Hubot>"
+sleep 2
+send "hubot recurry setpayload get_foo_com {\"foo\":\"bar\"}\n"
+expect "Hubot>"
+sleep 2
+send "hubot recurry\n"
+expect "Hubot>"
+sleep 10

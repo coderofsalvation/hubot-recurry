@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/coderofsalvation/hubot-recurry/issues"
   },
-  "homepage": "https://github.com/coderofsalvation/hubot-recurry"
+  "homepage": "https://github.com/coderofsalvation/hubot-recurry",
+  "devDependencies": {
+    "hubot": "^2.18.0"
+  }
 }

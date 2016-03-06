@@ -26,7 +26,7 @@ module.exports = (robot) ->
     url: ( if process.env.RECURRY_URL then process.env.RECURRY_URL else "http://localhost:3333")
     usage:
       setscheduler: "Usage: recurry setscheduler <id> <phrase>\n\n
-Example: recurry setscheduler 12 every 5 mins\n\nphrases: \n
+Example: recurry setscheduler foo every 5 mins\n\nphrases: \n
 \t314 milliseconds\n
 \t5 minutes 15 seconds\n
 \tan hour and a minute\n
@@ -49,6 +49,7 @@ Example: recurry add get http://fooo.com get_foo_com\n
       return a.toString()
 
   robot.respond /recurry$/i, (msg) ->
+    console.log recurry.url+"/scheduler"
     robot.http( recurry.url+"/scheduler"  ).get() (err,res,body) ->
       data = JSON.parse(body)
       msg.send format(data,'ascii')
@@ -124,7 +125,7 @@ Example: recurry add get http://fooo.com get_foo_com\n
     args = msg.match[1].split(" ")
     id = args.shift()
     data = { payload: args.join(" ") }
-    robot.http( recurry.url+"/payload/"+id  )
+    robot.http( recurry.url+"/scheduler/payload/"+id  )
       .header('Content-Type', 'application/json')
       .put( JSON.stringify(data) ) (err,res,body) ->
         data = JSON.parse(body)

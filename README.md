@@ -18,3 +18,11 @@ Interface to recurry, the [recurring REST-call scheduler](https://www.npmjs.com/
     hubot recurry view <id>                 - view details and payload of scheduled call
     hubot recurry trigger <id>              - manually trigger scheduler, regardless of scheduletime
 
+# Environment vars
+
+    RECURRY_URL               <- your recurry url (so hubot can post to that)
+
+# Testing 
+
+    $ npm install recurry  # one time
+    $ RECURRY_PATH=$(pwd)/node_modules/node-recurry ./test/commands
