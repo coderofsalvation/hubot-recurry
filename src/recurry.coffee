@@ -39,6 +39,7 @@ Example: recurry add get http://fooo.com get_foo_com\n
          recurry setpayload get_foo_com {\"foo\":\"bar\"}\n"
 
   format = (data,format) ->
+    return "empty reply from server..is recurry online?" if not data
     if format is "ascii"
       a = new ascii
       for row in data
@@ -49,7 +50,6 @@ Example: recurry add get http://fooo.com get_foo_com\n
       return a.toString()
 
   robot.respond /recurry$/i, (msg) ->
-    console.log recurry.url+"/scheduler"
     robot.http( recurry.url+"/scheduler"  ).get() (err,res,body) ->
       data = JSON.parse(body)
       msg.send format(data,'ascii')
